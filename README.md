@@ -8,7 +8,7 @@ The indels pipeline was modified as follows.
 It takes as input a pair of matched normal/tumor BAM files.
 
 It extracts from the BAM files all mapping that overlap with an amplicon of the
-manifest by at least 30 base pairs. From each such mapping it extracts the
+manifest by at least 20 base pairs. From each such mapping it extracts the
 corresponding read and complete it by the amplicon sequence in order the resulting
 sequence covers the full amplicon. The assumption underlying this operation is
 that the added sequence is not expected to induce an indel call as it will align
