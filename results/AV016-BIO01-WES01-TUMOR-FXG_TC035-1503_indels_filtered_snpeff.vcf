@@ -1,0 +1,21 @@
+##fileformat=VCFv4.1
+##fileDate=20210322
+##source=Canexia_indels
+##INFO=<ID=TYPE,Number=1,Type=String,Description="Variant type (DEL, INS, DELINS, MNV, SNP)">
+##INFO=<ID=VAF,Number=1,Type=Float,Description="Variant Allele Frequency">
+##INFO=<ID=SCORE,Number=1,Type=Float,Description="Penalty">
+##INFO=<ID=COMPLEXITY,Number=1,Type=Float,Description="Sequence complexity penalty">
+##INFO=<ID=OVERLAP_VAF,Number=1,Type=Float,Description="Cumulated VAF of overlapping indels">
+##INFO=<ID=CONTROL_VAF,Number=1,Type=Float,Description="Closest VAF of indel in a control sample">
+##INFO=<ID=COVERAGE,Number=1,Type=Integer,Description="Coverage">
+##INFO=<ID=ALT_COVERAGE,Number=1,Type=Integer,Description="Alternate coverage">
+##INFO=<ID=MAX_CLUSTER_COVERAGE,Number=1,Type=Integer,Description="Largest cluster coverage of variant">
+##INFO=<ID=AMPLICONS,Number=.,Type=String,Description="Amplicons where the variant is observed">
+##SnpEffVersion="4.3t (build 2017-11-24 10:18), by Pablo Cingolani"
+##SnpEffCmd="SnpEff  hg19 ./AV016-BIO01-WES01-TUMOR-FXG_TC035-1503_indels_filtered.vcf "
+##INFO=<ID=ANN,Number=.,Type=String,Description="Functional annotations: 'Allele | Annotation | Annotation_Impact | Gene_Name | Gene_ID | Feature_Type | Feature_ID | Transcript_BioType | Rank | HGVS.c | HGVS.p | cDNA.pos / cDNA.length | CDS.pos / CDS.length | AA.pos / AA.length | Distance | ERRORS / WARNINGS / INFO' ">
+##INFO=<ID=LOF,Number=.,Type=String,Description="Predicted loss of function effects for this variant. Format: 'Gene_Name | Gene_ID | Number_of_transcripts_in_gene | Percent_of_transcripts_affected'">
+##INFO=<ID=NMD,Number=.,Type=String,Description="Predicted nonsense mediated decay effects for this variant. Format: 'Gene_Name | Gene_ID | Number_of_transcripts_in_gene | Percent_of_transcripts_affected'">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
+chr19	1207076	.	TG	T	.	FAIL	TYPE=DEL;VAF=0.07648;SCORE=0.20602;COMPLEXITY=0.27273;OVERLAP_VAF=0.00498;CONTROL_VAF=0.0;COVERAGE=2628;ALT_COVERAGE=201;MAX_CLUSTER_COVERAGE=188;AMPLICONS=CG001v3.4.101;ANN=T|frameshift_variant|HIGH|STK11|STK11|transcript|NM_000455.4|protein_coding|1/10|c.169delG|p.Glu57fs|1284/3276|169/1302|57/433||INFO_REALIGN_3_PRIME;LOF=(STK11|STK11|1|1.00)
+chr7	55249011	.	A	ACC	.	FAIL	TYPE=INS;VAF=0.01472;SCORE=0.37179;COMPLEXITY=0.07692;OVERLAP_VAF=0.0;CONTROL_VAF=0.0;COVERAGE=2853;ALT_COVERAGE=42;MAX_CLUSTER_COVERAGE=28;AMPLICONS=CG001v4.0.35;ANN=ACC|frameshift_variant|HIGH|EGFR|EGFR|transcript|NM_005228.3|protein_coding|20/28|c.2310_2311insCC|p.Asn771fs|2557/5600|2311/3633|771/1210||INFO_REALIGN_3_PRIME,ACC|non_coding_transcript_exon_variant|MODIFIER|EGFR-AS1|EGFR-AS1|transcript|NR_047551.1|pseudogene|2/2|n.1252_1253insGG||||||;LOF=(EGFR|EGFR|4|0.25)

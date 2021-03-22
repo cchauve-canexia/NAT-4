@@ -1,0 +1,14 @@
+##fileformat=VCFv4.1
+##fileDate=20210322
+##source=Canexia_indels
+##INFO=<ID=TYPE,Number=1,Type=String,Description="Variant type (DEL, INS, DELINS, MNV, SNP)">
+##INFO=<ID=VAF,Number=1,Type=Float,Description="Variant Allele Frequency">
+##INFO=<ID=SCORE,Number=1,Type=Float,Description="Penalty">
+##INFO=<ID=COMPLEXITY,Number=1,Type=Float,Description="Sequence complexity penalty">
+##INFO=<ID=OVERLAP_VAF,Number=1,Type=Float,Description="Cumulated VAF of overlapping indels">
+##INFO=<ID=CONTROL_VAF,Number=1,Type=Float,Description="Closest VAF of indel in a control sample">
+##INFO=<ID=COVERAGE,Number=1,Type=Integer,Description="Coverage">
+##INFO=<ID=ALT_COVERAGE,Number=1,Type=Integer,Description="Alternate coverage">
+##INFO=<ID=MAX_CLUSTER_COVERAGE,Number=1,Type=Integer,Description="Largest cluster coverage of variant">
+##INFO=<ID=AMPLICONS,Number=.,Type=String,Description="Amplicons where the variant is observed">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
