@@ -55,12 +55,5 @@ a summary including expected and called indels is in the file
 `ALL_SAMPLES_summary.vcf`.
 
 All the expected indels are found by the modified pipeline, but for two that are
-in MSI amplicons and one that is filtered because its VAF is low (0.42%).
-Moreover a few extra indels are called:
-- two are indels that also occur as an expected indel in a sample (on `chr19`),
-  and is linked to a 5 Gs repeat.
-- two are on `chr7` and appear in a normal and a tumor sample, that are not matched.
-  They are in `EGFR:Exon20_part1`. It is an insertion `A -> ACC` that is actually
-  part of a region with ambiguous alignments where we observe an MNV `AA -> CC`
-  that is not called because of the high overlap penalty. I would consider this
-  indel as a FP.
+in MSI amplicons and one that is filtered because its VAF is low (0.42%). No other
+indel is called.
