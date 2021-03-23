@@ -1,5 +1,5 @@
 ##fileformat=VCFv4.1
-##fileDate=20210322
+##fileDate=20210323
 ##source=Canexia_indels
 ##INFO=<ID=TYPE,Number=1,Type=String,Description="Variant type (DEL, INS, DELINS, MNV, SNP)">
 ##INFO=<ID=VAF,Number=1,Type=Float,Description="Variant Allele Frequency">

@@ -1,5 +1,5 @@
 ##fileformat=VCFv4.1
-##fileDate=20210322
+##fileDate=20210323
 ##source=Canexia_indels
 ##INFO=<ID=TYPE,Number=1,Type=String,Description="Variant type (DEL, INS, DELINS, MNV, SNP)">
 ##INFO=<ID=VAF,Number=1,Type=Float,Description="Variant Allele Frequency">
@@ -17,4 +17,4 @@
 ##INFO=<ID=LOF,Number=.,Type=String,Description="Predicted loss of function effects for this variant. Format: 'Gene_Name | Gene_ID | Number_of_transcripts_in_gene | Percent_of_transcripts_affected'">
 ##INFO=<ID=NMD,Number=.,Type=String,Description="Predicted nonsense mediated decay effects for this variant. Format: 'Gene_Name | Gene_ID | Number_of_transcripts_in_gene | Percent_of_transcripts_affected'">
 #CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
-chr19	1207076	.	TG	T	.	FAIL	TYPE=DEL;VAF=0.02852;SCORE=0.18324;COMPLEXITY=0.27273;OVERLAP_VAF=0.0;CONTROL_VAF=0.0;COVERAGE=2244;ALT_COVERAGE=64;MAX_CLUSTER_COVERAGE=61;AMPLICONS=CG001v3.4.101;ANN=T|frameshift_variant|HIGH|STK11|STK11|transcript|NM_000455.4|protein_coding|1/10|c.169delG|p.Glu57fs|1284/3276|169/1302|57/433||INFO_REALIGN_3_PRIME;LOF=(STK11|STK11|1|1.00)
+chr19	1207076	.	TG	T	.	FAIL	TYPE=DEL;VAF=2.53064;SCORE=0.18324;COMPLEXITY=0.27273;OVERLAP_VAF=0.0;CONTROL_VAF=0.0;COVERAGE=2529;ALT_COVERAGE=64;MAX_CLUSTER_COVERAGE=61;AMPLICONS=CG001v3.4.101;ANN=T|frameshift_variant|HIGH|STK11|STK11|transcript|NM_000455.4|protein_coding|1/10|c.169delG|p.Glu57fs|1284/3276|169/1302|57/433||INFO_REALIGN_3_PRIME;LOF=(STK11|STK11|1|1.00)

@@ -1,5 +1,5 @@
 ##fileformat=VCFv4.1
-##fileDate=20210322
+##fileDate=20210323
 ##source=Canexia_indels
 ##INFO=<ID=TYPE,Number=1,Type=String,Description="Variant type (DEL, INS, DELINS, MNV, SNP)">
 ##INFO=<ID=VAF,Number=1,Type=Float,Description="Variant Allele Frequency">
@@ -11,4 +11,11 @@
 ##INFO=<ID=ALT_COVERAGE,Number=1,Type=Integer,Description="Alternate coverage">
 ##INFO=<ID=MAX_CLUSTER_COVERAGE,Number=1,Type=Integer,Description="Largest cluster coverage of variant">
 ##INFO=<ID=AMPLICONS,Number=.,Type=String,Description="Amplicons where the variant is observed">
+##SnpEffVersion="4.3t (build 2017-11-24 10:18), by Pablo Cingolani"
+##SnpEffCmd="SnpEff  hg19 ./C035_0213_012547_XX_Whole_T2_K1ID2_A68177.sam_indels_filtered.vcf "
+##INFO=<ID=ANN,Number=.,Type=String,Description="Functional annotations: 'Allele | Annotation | Annotation_Impact | Gene_Name | Gene_ID | Feature_Type | Feature_ID | Transcript_BioType | Rank | HGVS.c | HGVS.p | cDNA.pos / cDNA.length | CDS.pos / CDS.length | AA.pos / AA.length | Distance | ERRORS / WARNINGS / INFO' ">
+##INFO=<ID=LOF,Number=.,Type=String,Description="Predicted loss of function effects for this variant. Format: 'Gene_Name | Gene_ID | Number_of_transcripts_in_gene | Percent_of_transcripts_affected'">
+##INFO=<ID=NMD,Number=.,Type=String,Description="Predicted nonsense mediated decay effects for this variant. Format: 'Gene_Name | Gene_ID | Number_of_transcripts_in_gene | Percent_of_transcripts_affected'">
 #CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
+chr15	90631917	.	T	TC	.	FAIL	TYPE=INS;VAF=0.39536;SCORE=0.8697;COMPLEXITY=0.27273;OVERLAP_VAF=0.0;CONTROL_VAF=0.0;COVERAGE=3794;ALT_COVERAGE=15;MAX_CLUSTER_COVERAGE=4;AMPLICONS=CG001v3.4.43;ANN=TC|frameshift_variant|HIGH|IDH2|IDH2|transcript|NM_002168.3|protein_coding|4/11|c.435dupG|p.Thr146fs|599/1810|435/1359|145/452||,TC|frameshift_variant|HIGH|IDH2|IDH2|transcript|NM_001289910.1|protein_coding|4/11|c.279dupG|p.Thr94fs|366/1577|279/1203|93/400||,TC|frameshift_variant|HIGH|IDH2|IDH2|transcript|NM_001290114.1|protein_coding|2/9|c.45dupG|p.Thr16fs|341/1552|45/969|15/322||;LOF=(IDH2|IDH2|3|0.67)
+chr7	55228052	.	TA	T	.	FAIL	TYPE=DEL;VAF=0.50028;SCORE=0.87247;COMPLEXITY=0.22222;OVERLAP_VAF=0.0;CONTROL_VAF=0.42803;COVERAGE=1799;ALT_COVERAGE=9;MAX_CLUSTER_COVERAGE=6;AMPLICONS=CG001v4.0.50;ANN=T|downstream_gene_variant|MODIFIER|EGFR|EGFR|transcript|NM_201283.1|protein_coding||c.*3517delA|||||3409|,T|intron_variant|MODIFIER|EGFR|EGFR|transcript|NM_005228.3|protein_coding|12/27|c.1498+22delA||||||,T|intron_variant|MODIFIER|EGFR|EGFR|transcript|NM_201282.1|protein_coding|12/15|c.1498+22delA||||||,T|intron_variant|MODIFIER|EGFR|EGFR|transcript|NM_201284.1|protein_coding|12/15|c.1498+22delA||||||
