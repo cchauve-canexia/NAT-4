@@ -1,0 +1,29 @@
+2021-03-23
+Explored indel: chr19:1207076:TG:T	GT:AD 1/0:800,748 0/0:695,0
+Reference context: TGGGGGA
+Alternate context: TGGGGA
+Input BAM file: /home/cchauve/Natera/data/Natera_Tumor-6_C035_0121_010702_XX_Whole_T2_K1ID2_A58149.sam.bam
+
+The full set of overlapping mappings contains 2427 mappings
+The full set of overlapping mappings originate from 1929 distinct read pairs
+The full set of overlapping mappings originate from 2427 distinct reads
+
+The set of primary overlapping mappings contains 2427 mappings
+The set of primary overlapping mappings originate from 1929 distinct read pairs
+The set of primary overlapping mappings originate from 2427 distinct reads
+
+The set of mappings covering the reference allele contains 2389 mappings
+The set of mappings covering the reference allele originate from 1907 distinct read pairs
+The set of mappings covering the reference allele originate from 2389 distinct reads
+
+The set of mappings covering the reference allele context contains 2275 mappings
+The set of mappings covering the reference allele context originate from 1819 distinct read pairs
+The set of mappings covering the reference allele context originate from 2275 distinct reads
+
+The set of mappings including the reference allele context contains 1093 mappings
+The set of mappings including the reference allele context originate from 895 distinct read pairs
+The set of mappings including the reference allele context originate from 1093 distinct reads
+
+The set of mappings including the alternate allele context contains 1149 mappings
+The set of mappings including the alternate allele context originate from 905 distinct read pairs
+The set of mappings including the alternate allele context originate from 1149 distinct reads
