@@ -28,7 +28,7 @@ in one of the amplicon primers.
 This pipeline is implemented in the branch `NAT-4` of the indels pipeline github
 repo `https://github.com/contextual-genomics/indels-pipeline`.
 
-Variants with a VAF below 1% were not called.
+Variants with a VAF below 0.375%% were not called.
 
 ## Data
 
@@ -55,5 +55,5 @@ a summary including expected and called indels is in the file
 `ALL_SAMPLES_summary.vcf`.
 
 All the expected indels are found by the modified pipeline, but for two that are
-in MSI amplicons and one that is filtered because its VAF is low (0.42%). No other
-indel is called.
+in MSI amplicons. All other found vaerants are either in samples for which we do 
+nt have the VCF file either have a very low VAF (<1%).
