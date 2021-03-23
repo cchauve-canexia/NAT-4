@@ -2,59 +2,83 @@
 Exploring the reads supporting a given indel from a BAM file
 """
 import datetime
+import os
 import sys
 
 import pysam
 
-print(datetime.date.today().isoformat())
-
 # Input indel
-INDEL = sys.argv[1]
+INDEL_CONTEXT = sys.argv[1]
+INDEL = ':'.join(INDEL_CONTEXT.split(':')[:-1])
 ANNOTATION = sys.argv[2]
-print(f"Explored indel: {':'.join(INDEL.split(':')[:-1])}\t{ANNOTATION}")
+
+# Out files
+OUT_PREFIX = INDEL.replace(':', '_')
+OUT_DIR = OUT_PREFIX
+os.makedirs(OUT_DIR, exist_ok=True)
+OUT_SUMMARY_FILE_PATH = os.path.join(
+    OUT_DIR, f"{OUT_PREFIX}_summary.txt"
+)
+OUT_SUMMARY_FILE = open(OUT_SUMMARY_FILE_PATH, 'w')
+OUT_SUMMARY_FILE.write(f"{datetime.date.today().isoformat()}\n")
+OUT_REF_ALLELE_READS_FILE_PATH = os.path.join(
+    OUT_DIR, f"{OUT_PREFIX}_ref_allele.txt"
+)
+OUT_REF_ALLELE_READS_FILE = open(OUT_REF_ALLELE_READS_FILE_PATH, 'w')
+OUT_ALT_ALLELE_READS_FILE_PATH = os.path.join(
+    OUT_DIR, f"{OUT_PREFIX}_alt_allele.txt"
+)
+OUT_ALT_ALLELE_READS_FILE = open(OUT_ALT_ALLELE_READS_FILE_PATH, 'w')
+
+# General statistics
+OUT_SUMMARY_FILE.write(f"Explored indel: {INDEL}\t{ANNOTATION}\n")
 CHR = INDEL.split(':')[0]
 START = int(INDEL.split(':')[1]) # Position of the indel in 1-base
 REF = INDEL.split(':')[2]
 ALT = INDEL.split(':')[3]
 END = START + len(REF) - 1
 # Sequence starting at POS and including the full reference allele
-REF_CONTEXT = INDEL.split(':')[4]
+REF_CONTEXT = INDEL_CONTEXT.split(':')[-1]
 REF_CONTEXT_LEN = len(REF_CONTEXT)
 END_REF_CONTEXT = START + REF_CONTEXT_LEN - 1
-print(f"Reference context: {REF_CONTEXT}")
+OUT_SUMMARY_FILE.write(f"Reference allele context: {REF_CONTEXT}\n")
 # Sequence starting at POS and including the full alternate allele
 ALT_CONTEXT = f"{ALT}{REF_CONTEXT[len(REF):]}"
 ALT_CONTEXT_LEN = len(ALT_CONTEXT)
 END_ALT_CONTEXT = START + ALT_CONTEXT_LEN - 1
-print(f"Alternate context: {ALT_CONTEXT}")
+OUT_SUMMARY_FILE.write(f"Alternate allele context: {ALT_CONTEXT}\n")
 
 # Path to input BAM file
 BAM_FILE_PATH = sys.argv[3]
 BAM_FILE = pysam.AlignmentFile(BAM_FILE_PATH, 'rb')
-print(f"Input BAM file: {BAM_FILE_PATH}")
+OUT_SUMMARY_FILE.write(f"Input BAM file: {BAM_FILE_PATH}\n")
 
 # Auxiliary functions
 
 def read_sign(mapping):
     if mapping.is_read1:
-        return 'fwd'
+        return '1'
     if mapping.is_read2:
-        return 'rev'
+        return '2'
 
 def stats_for_mappings(mappings, description):
     MAPPINGS_NB = len(mappings)
-    print(f"\nThe {description} contains {MAPPINGS_NB} mappings")
+    OUT_SUMMARY_FILE.write(
+        f"\nThe {description} contains {MAPPINGS_NB} mappings\n"
+    )
     READ_PAIRS_NAMES = set([mapping.query_name for mapping in mappings])
     READ_PAIRS_NB = len(READ_PAIRS_NAMES)
-    print(
+    OUT_SUMMARY_FILE.write(
         f"The {description} originate "
-        f"from {READ_PAIRS_NB} distinct read pairs"
+        f"from {READ_PAIRS_NB} distinct read pairs\n"
     )
     READ_NAMES = set(
         [f"{mapping.query_name}:{read_sign(mapping)}" for mapping in mappings]
     )
     READS_NB = len(READ_NAMES)
-    print(f"The {description} originate from {READS_NB} distinct reads")
+    OUT_SUMMARY_FILE.write(
+        f"The {description} originate from {READS_NB} distinct reads\n"
+    )
     return (MAPPINGS_NB, READ_PAIRS_NB, READS_NB)
 
 def check_context(mapping, context_seq):
@@ -62,10 +86,6 @@ def check_context(mapping, context_seq):
     query_context_end = START - (mapping.reference_start + 1) + len(context_seq)
     query_seq = mapping.query_alignment_sequence
     query_context_seq = query_seq[query_context_start:query_context_end]
-    # print(f"QSEQ\t{query_seq}")
-    # print(f"CTX \t{context_seq}")
-    # print(f"CRD \t{START} {mapping.reference_start} {query_context_start}-{query_context_end}")
-    # print(f"QCTX\t{query_context_seq}")
     return query_context_seq == context_seq
 
 # Analysis
@@ -111,6 +131,12 @@ REF_CONTEXT_MAPPINGS_NB = stats_for_mappings(
     REF_CONTEXT_MAPPINGS,
     'set of mappings including the reference allele context'
 )
+REF_CONTEXT_READS = list(set([
+    f"{mapping.query_name}:{read_sign(mapping)}"
+    for mapping in REF_CONTEXT_MAPPINGS
+]))
+REF_CONTEXT_READS.sort()
+OUT_REF_ALLELE_READS_FILE.write('\n'.join(REF_CONTEXT_READS))
 
 # Mappings with the alternate  allele sequence
 ALT_CONTEXT_MAPPINGS = [
@@ -121,3 +147,14 @@ ALT_CONTEXT_MAPPINGS_NB = stats_for_mappings(
     ALT_CONTEXT_MAPPINGS,
     'set of mappings including the alternate allele context'
 )
+ALT_ALLELE_READS_FILE = open(f"{INDEL.replace(':', '_')}_alt_allele.txt", 'w')
+ALT_CONTEXT_READS = list(set([
+    f"{mapping.query_name}:{read_sign(mapping)}"
+    for mapping in ALT_CONTEXT_MAPPINGS
+]))
+ALT_CONTEXT_READS.sort()
+OUT_ALT_ALLELE_READS_FILE.write('\n'.join(ALT_CONTEXT_READS))
+
+OUT_REF_ALLELE_READS_FILE.close()
+OUT_ALT_ALLELE_READS_FILE.close()
+OUT_SUMMARY_FILE.close()
