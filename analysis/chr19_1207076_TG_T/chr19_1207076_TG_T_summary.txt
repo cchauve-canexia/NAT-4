@@ -1,4 +1,5 @@
 2021-03-23
+check_indel.py chr19:1207076:TG:T:TGGGGGA GT:AD 1/0:800,748 0/0:695,0 /home/cchauve/Natera/data/Natera_Tumor-6_C035_0121_010702_XX_Whole_T2_K1ID2_A58149.sam.bam
 Explored indel: chr19:1207076:TG:T	GT:AD 1/0:800,748 0/0:695,0
 Reference allele context: TGGGGGA
 Alternate allele context: TGGGGA

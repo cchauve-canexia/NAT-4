@@ -21,6 +21,7 @@ OUT_SUMMARY_FILE_PATH = os.path.join(
 )
 OUT_SUMMARY_FILE = open(OUT_SUMMARY_FILE_PATH, 'w')
 OUT_SUMMARY_FILE.write(f"{datetime.date.today().isoformat()}\n")
+OUT_SUMMARY_FILE.write(f"{' '.join(sys.argv)}\n")
 OUT_REF_ALLELE_READS_FILE_PATH = os.path.join(
     OUT_DIR, f"{OUT_PREFIX}_ref_allele.txt"
 )
