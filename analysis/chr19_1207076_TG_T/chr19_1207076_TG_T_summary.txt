@@ -1,7 +1,7 @@
 2021-03-23
 Explored indel: chr19:1207076:TG:T	GT:AD 1/0:800,748 0/0:695,0
-Reference context: TGGGGGA
-Alternate context: TGGGGA
+Reference allele context: TGGGGGA
+Alternate allele context: TGGGGA
 Input BAM file: /home/cchauve/Natera/data/Natera_Tumor-6_C035_0121_010702_XX_Whole_T2_K1ID2_A58149.sam.bam
 
 The full set of overlapping mappings contains 2427 mappings
