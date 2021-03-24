@@ -1,0 +1,20 @@
+##fileformat=VCFv4.1
+##fileDate=20210324
+##source=Canexia_indels
+##INFO=<ID=TYPE,Number=1,Type=String,Description="Variant type (DEL, INS, DELINS, MNV, SNP)">
+##INFO=<ID=VAF,Number=1,Type=Float,Description="Variant Allele Frequency">
+##INFO=<ID=SCORE,Number=1,Type=Float,Description="Penalty">
+##INFO=<ID=COMPLEXITY,Number=1,Type=Float,Description="Sequence complexity penalty">
+##INFO=<ID=OVERLAP_VAF,Number=1,Type=Float,Description="Cumulated VAF of overlapping indels">
+##INFO=<ID=CONTROL_VAF,Number=1,Type=Float,Description="Closest VAF of indel in a control sample">
+##INFO=<ID=COVERAGE,Number=1,Type=Integer,Description="Coverage">
+##INFO=<ID=ALT_COVERAGE,Number=1,Type=Integer,Description="Alternate coverage">
+##INFO=<ID=MAX_CLUSTER_COVERAGE,Number=1,Type=Integer,Description="Largest cluster coverage of variant">
+##INFO=<ID=AMPLICONS,Number=.,Type=String,Description="Amplicons where the variant is observed">
+##SnpEffVersion="4.3t (build 2017-11-24 10:18), by Pablo Cingolani"
+##SnpEffCmd="SnpEff  hg19 ./C035_0204_012538_XX_Whole_T2_K1ID2_A68162.sam_indels_filtered.vcf "
+##INFO=<ID=ANN,Number=.,Type=String,Description="Functional annotations: 'Allele | Annotation | Annotation_Impact | Gene_Name | Gene_ID | Feature_Type | Feature_ID | Transcript_BioType | Rank | HGVS.c | HGVS.p | cDNA.pos / cDNA.length | CDS.pos / CDS.length | AA.pos / AA.length | Distance | ERRORS / WARNINGS / INFO' ">
+##INFO=<ID=LOF,Number=.,Type=String,Description="Predicted loss of function effects for this variant. Format: 'Gene_Name | Gene_ID | Number_of_transcripts_in_gene | Percent_of_transcripts_affected'">
+##INFO=<ID=NMD,Number=.,Type=String,Description="Predicted nonsense mediated decay effects for this variant. Format: 'Gene_Name | Gene_ID | Number_of_transcripts_in_gene | Percent_of_transcripts_affected'">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
+chr17	7578205	.	CTA	C	.	FAIL	TYPE=DEL;VAF=54.0;SCORE=0.05203;COMPLEXITY=0.0;OVERLAP_VAF=0.0;CONTROL_VAF=0.0;COVERAGE=2100;ALT_COVERAGE=1134;MAX_CLUSTER_COVERAGE=1075;AMPLICONS=CG001v4.0.48,CG001v3.4.108;ANN=C|frameshift_variant|HIGH|TP53|TP53|transcript|NM_000546.5|protein_coding|6/11|c.642_643delTA|p.His214fs|845/2591|642/1182|214/393||,C|frameshift_variant|HIGH|TP53|TP53|transcript|NM_001126115.1|protein_coding|2/7|c.246_247delTA|p.His82fs|525/2271|246/786|82/261||,C|frameshift_variant|HIGH|TP53|TP53|transcript|NM_001126116.1|protein_coding|2/8|c.246_247delTA|p.His82fs|525/2404|246/630|82/209||,C|frameshift_variant|HIGH|TP53|TP53|transcript|NM_001126117.1|protein_coding|2/8|c.246_247delTA|p.His82fs|525/2331|246/645|82/214||,C|frameshift_variant|HIGH|TP53|TP53|transcript|NM_001276697.1|protein_coding|2/7|c.165_166delTA|p.His55fs|525/2271|165/705|55/234||,C|frameshift_variant|HIGH|TP53|TP53|transcript|NM_001276698.1|protein_coding|2/8|c.165_166delTA|p.His55fs|525/2404|165/549|55/182||,C|frameshift_variant|HIGH|TP53|TP53|transcript|NM_001276699.1|protein_coding|2/8|c.165_166delTA|p.His55fs|525/2331|165/564|55/187||,C|frameshift_variant|HIGH|TP53|TP53|transcript|NM_001126112.2|protein_coding|6/11|c.642_643delTA|p.His214fs|842/2588|642/1182|214/393||,C|frameshift_variant|HIGH|TP53|TP53|transcript|NM_001126113.2|protein_coding|6/12|c.642_643delTA|p.His214fs|845/2651|642/1041|214/346||,C|frameshift_variant|HIGH|TP53|TP53|transcript|NM_001126114.2|protein_coding|6/12|c.642_643delTA|p.His214fs|845/2724|642/1026|214/341||,C|frameshift_variant|HIGH|TP53|TP53|transcript|NM_001126118.1|protein_coding|5/10|c.525_526delTA|p.His175fs|962/2708|525/1065|175/354||,C|frameshift_variant|HIGH|TP53|TP53|transcript|NM_001276695.1|protein_coding|6/12|c.525_526delTA|p.His175fs|845/2651|525/924|175/307||,C|frameshift_variant|HIGH|TP53|TP53|transcript|NM_001276696.1|protein_coding|6/12|c.525_526delTA|p.His175fs|845/2724|525/909|175/302||,C|frameshift_variant|HIGH|TP53|TP53|transcript|NM_001276760.1|protein_coding|6/11|c.525_526delTA|p.His175fs|845/2591|525/1065|175/354||,C|frameshift_variant|HIGH|TP53|TP53|transcript|NM_001276761.1|protein_coding|6/11|c.525_526delTA|p.His175fs|842/2588|525/1065|175/354||;LOF=(TP53|TP53|15|1.00)
