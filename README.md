@@ -58,9 +58,9 @@ All the expected indels are found by the modified pipeline. Two additional indel
 were detected:
 - the chr19 indel expected in sample
   `Natera_Tumor-6_C035_0121_010702_XX_Whole_T2_K1ID2_A58149`
-  was also detected in cell-line sample `AV017-BIO01-WES01-TUMOR-FXG_TC035-1504`
-  with VAF=24%;
+  was also detected in cell-line samples `AV017-BIO01-WES01-TUMOR-FXG_TC035-1504`
+  with VAF=24% and `AV016-BIO01-WES01-TUMOR-FXG_TC035-1503` with VAF=44%;
 - an indel on chromosome 1 was detected with VAF=5% and supported by 61 reads in sample
   `C035_0210_012544_XX_Whole_T2_K1ID2_A68165`, which is also present in the normal
   sample with VAF=2.5%, so is likely a False Positive that would be filtered out
-  by slightly more stringent reportable thresholds. 
+  by slightly more stringent reportable thresholds.
