@@ -1,5 +1,5 @@
 ##fileformat=VCFv4.1
-##fileDate=20210323
+##fileDate=20210324
 ##source=Canexia_indels
 ##INFO=<ID=TYPE,Number=1,Type=String,Description="Variant type (DEL, INS, DELINS, MNV, SNP)">
 ##INFO=<ID=VAF,Number=1,Type=Float,Description="Variant Allele Frequency">
@@ -11,10 +11,4 @@
 ##INFO=<ID=ALT_COVERAGE,Number=1,Type=Integer,Description="Alternate coverage">
 ##INFO=<ID=MAX_CLUSTER_COVERAGE,Number=1,Type=Integer,Description="Largest cluster coverage of variant">
 ##INFO=<ID=AMPLICONS,Number=.,Type=String,Description="Amplicons where the variant is observed">
-##SnpEffVersion="4.3t (build 2017-11-24 10:18), by Pablo Cingolani"
-##SnpEffCmd="SnpEff  hg19 ./AV001-BIO01-WES01-TUMOR-FXG_TC035-0116_indels_filtered.vcf "
-##INFO=<ID=ANN,Number=.,Type=String,Description="Functional annotations: 'Allele | Annotation | Annotation_Impact | Gene_Name | Gene_ID | Feature_Type | Feature_ID | Transcript_BioType | Rank | HGVS.c | HGVS.p | cDNA.pos / cDNA.length | CDS.pos / CDS.length | AA.pos / AA.length | Distance | ERRORS / WARNINGS / INFO' ">
-##INFO=<ID=LOF,Number=.,Type=String,Description="Predicted loss of function effects for this variant. Format: 'Gene_Name | Gene_ID | Number_of_transcripts_in_gene | Percent_of_transcripts_affected'">
-##INFO=<ID=NMD,Number=.,Type=String,Description="Predicted nonsense mediated decay effects for this variant. Format: 'Gene_Name | Gene_ID | Number_of_transcripts_in_gene | Percent_of_transcripts_affected'">
 #CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
-chr10	89717769	.	TA	T	.	FAIL	TYPE=DEL;VAF=0.48966;SCORE=0.24747;COMPLEXITY=0.27273;OVERLAP_VAF=0.11111;CONTROL_VAF=0.0;COVERAGE=1838;ALT_COVERAGE=9;MAX_CLUSTER_COVERAGE=9;AMPLICONS=CG001v5.0.43;ANN=T|frameshift_variant&splice_region_variant|HIGH|PTEN|PTEN|transcript|NM_001304717.2|protein_coding|8/10|c.1319delA|p.Lys440fs|1831/8701|1319/1731|440/576||INFO_REALIGN_3_PRIME,T|frameshift_variant&splice_region_variant|HIGH|PTEN|PTEN|transcript|NM_000314.6|protein_coding|7/9|c.800delA|p.Lys267fs|1832/8702|800/1212|267/403||INFO_REALIGN_3_PRIME,T|frameshift_variant&splice_region_variant|HIGH|PTEN|PTEN|transcript|NM_001304718.1|protein_coding|7/9|c.209delA|p.Lys70fs|1946/8816|209/621|70/206||INFO_REALIGN_3_PRIME;LOF=(PTEN|PTEN|3|1.00)

@@ -1,5 +1,5 @@
 ##fileformat=VCFv4.1
-##fileDate=20210323
+##fileDate=20210324
 ##source=Canexia_indels
 ##INFO=<ID=TYPE,Number=1,Type=String,Description="Variant type (DEL, INS, DELINS, MNV, SNP)">
 ##INFO=<ID=VAF,Number=1,Type=Float,Description="Variant Allele Frequency">
@@ -11,10 +11,4 @@
 ##INFO=<ID=ALT_COVERAGE,Number=1,Type=Integer,Description="Alternate coverage">
 ##INFO=<ID=MAX_CLUSTER_COVERAGE,Number=1,Type=Integer,Description="Largest cluster coverage of variant">
 ##INFO=<ID=AMPLICONS,Number=.,Type=String,Description="Amplicons where the variant is observed">
-##SnpEffVersion="4.3t (build 2017-11-24 10:18), by Pablo Cingolani"
-##SnpEffCmd="SnpEff  hg19 ./C035_0210_012544_PB_Whole_C1_K1ID2_A68238.sam_indels_filtered.vcf "
-##INFO=<ID=ANN,Number=.,Type=String,Description="Functional annotations: 'Allele | Annotation | Annotation_Impact | Gene_Name | Gene_ID | Feature_Type | Feature_ID | Transcript_BioType | Rank | HGVS.c | HGVS.p | cDNA.pos / cDNA.length | CDS.pos / CDS.length | AA.pos / AA.length | Distance | ERRORS / WARNINGS / INFO' ">
-##INFO=<ID=LOF,Number=.,Type=String,Description="Predicted loss of function effects for this variant. Format: 'Gene_Name | Gene_ID | Number_of_transcripts_in_gene | Percent_of_transcripts_affected'">
-##INFO=<ID=NMD,Number=.,Type=String,Description="Predicted nonsense mediated decay effects for this variant. Format: 'Gene_Name | Gene_ID | Number_of_transcripts_in_gene | Percent_of_transcripts_affected'">
 #CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
-chr12	133250121	.	G	GTT	.	FAIL	TYPE=INS;VAF=0.44843;SCORE=0.70513;COMPLEXITY=0.07692;OVERLAP_VAF=0.0;CONTROL_VAF=0.0;COVERAGE=669;ALT_COVERAGE=3;MAX_CLUSTER_COVERAGE=1;AMPLICONS=CG001v4.0.34;ANN=GTT|intron_variant|MODIFIER|POLE|POLE|transcript|NM_006231.3|protein_coding|13/48|c.1359+39_1359+40insAA||||||
