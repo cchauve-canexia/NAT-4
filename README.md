@@ -65,7 +65,7 @@ The five expected indels were detected, including the two indels in MSI amplicon
 with a VAF close to the expected VAF in all cases:  
 
 `Sample			Indel			Gene name, 	Expected	Predicted`
-`  						MSI status	VAF		VAF`  
+`-			-			MSI status	VAF		VAF`  
 `C035_0204_012538`	`chr17:7578205:CTA:C`	`TP53`		50.3%		54%  
 `C035_0213_012547`	`chr15:90631917:T:TC`	`IDH2`		15%		14.78%  
 `C035_0213_012547`	`chr17:56435160:AC:A`	`RNF43:MSI`	30.57%		30.9%  
